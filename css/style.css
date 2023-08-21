@@ -1067,7 +1067,7 @@ body {
   line-height: 1.87;
 }
 /* Hamburger Menu Open */
-.menu-toggle {
+.menu-toggle.js-open-menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1089,6 +1089,19 @@ body {
 .menu-icon {
   fill: currentColor;
 }
+.menu-toggle.js-close-menu {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  color: var(--navyblue);
+  background-color: var(--cornflower);
+}
 
 /* Hamburger Menu Navigations and Close Icon */
 .menu-container {
@@ -1096,7 +1109,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: 0;
+  top: 24px;
   left: 0;
   width: 100vw;
   height: 100vh;
