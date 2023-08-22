@@ -11,7 +11,7 @@
   --cornflower: #e7e9fc;
   --cloud: #f4f4fd;
   --navyblu-emodal: rgba(46, 47, 66, 0.4);
-  --grey: rgba(46, 47, 66, 0.7);
+  /* --grey: rgba(46, 47, 66, 0.7); */
   --white: #ffffff;
   --dairy: #fcfcfc;
   --accent-color: #2196f3;
@@ -88,7 +88,8 @@ body {
 }
 
 .container {
-  width: 320px;
+  /* width: 320px; */
+  width: 100%;
   padding: 0px 15px;
   margin: 0 auto;
   @media screen and (min-width: 428px) {
@@ -108,7 +109,7 @@ body {
 }
 
 .menu {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   height: 70px;
 
@@ -185,7 +186,7 @@ body {
   font-size: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
-  line-height: 1.17;
+  line-height: 21px;
   letter-spacing: 0.54px;
 }
 
@@ -224,49 +225,42 @@ body {
 }
 /* SECTION 1 */
 .hero {
-  /* MOBILE 320PX */
-  background: url(../images/bg.hero-m320.jpg),
-    var(--grey, rgba(46, 47, 66, 0.7));
+  background: linear-gradient(
+      to right,
+      var(--grey, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
+    ),
+    url(../images/hero-m.jpg);
 
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
+  display: flex;
   background-size: cover;
-
+  justify-content: center;
   padding-top: 112px;
   padding-bottom: 112px;
-  text-align: center;
-  background-position: center;
+
   margin-left: auto;
   margin-right: auto;
-  background-size: cover;
 
   /* MOBILE 320PX 2X */
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2ddpx) {
-    background: url(../images/bg.hero-m320@2x.jpg),
-      var(--grey, rgba(46, 47, 66, 0.7));
-  }
-  /* MOBILE */
-  @media screen and (min-width: 428px) {
-    background: url(../images/bg.hero-m.jpg), var(--grey, rgba(46, 47, 66, 0.7));
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    background: linear-gradient(
+        to right,
+        var(--grey, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
+      ),
+      url(../images/hero-m@2x.jpg);
     background-size: cover;
-    /* MOBILE 2X */
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2ddpx) {
-      background: url(../images/bg.hero-m@2x.jpg),
-        var(--grey, rgba(46, 47, 66, 0.7));
-    }
   }
+
   /* TABLET */
   @media screen and (min-width: 768px) {
-    background: url(../images/bg.hero-t.jpg), var(--grey, rgba(46, 47, 66, 0.7));
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    background: linear-gradient(
+        to right,
+        var(--grey, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
+      ),
+      url(../images/hero-t.jpg);
     background-size: cover;
+
     padding-top: 188px;
     padding-bottom: 188px;
 
@@ -274,28 +268,40 @@ body {
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2ddpx) {
-      background: url(../images/bg.hero-t@2x.jpg),
-        var(--grey, rgba(46, 47, 66, 0.7));
+      background-image: linear-gradient(
+          to right,
+          var(--grey, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
+        ),
+        url(../images/hero-t@2x.jpg);
     }
   }
   /* DESKTOP */
   @media screen and (min-width: 1158px) {
-    background: url(../images/bg.hero-d.jpg), var(--grey, rgba(46, 47, 66, 0.7));
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    background: linear-gradient(
+        to right,
+        var(--grey, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
+      ),
+      url(../images/hero-d.jpg);
+
     background-size: cover;
 
     /* DESKTOP 2X */
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2ddpx) {
-      background: url(../images/bg.hero-d@2x.jpg),
-        var(--grey, rgba(46, 47, 66, 0.7));
+      background: linear-gradient(
+          to right,
+          var(--grey, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
+        ),
+        url(../images/hero-d@2x.jpg);
     }
   }
 }
-
+.hero-container {
+  text-align: center;
+}
 .hero-title {
+  text-align: center;
   line-height: 1.07;
   letter-spacing: 0.04em;
   color: var(--white);
@@ -324,7 +330,7 @@ body {
 .button.primary {
   background: var(--iris, #4d5ae5);
   color: var(--white);
-  line-height: 1.87;
+  /* line-height: 1.87; */
   letter-spacing: 0.06em;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -725,6 +731,9 @@ body {
   justify-content: center;
   flex-direction: column;
 
+  @media screen and (min-width: 428px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 3 - 30px);
   }
@@ -808,7 +817,7 @@ body {
   @media screen and (min-width: 768px) {
     width: 264px;
     margin-left: 0;
-    margin-bottom: 72px;
+
     text-align: left;
   }
   @media screen and (min-width: 1158px) {
@@ -947,9 +956,9 @@ body {
 /* START PORTFOLIO PAGE */
 .filters {
   display: flex;
-
   margin-bottom: 50px;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 16px;
   flex-wrap: wrap;
   align-items: flex-start;
 
@@ -958,9 +967,9 @@ body {
   }
 }
 
-.filters .space + .space {
+/* .filters .space + .space {
   margin-left: 8px;
-}
+} */
 
 .button.filter {
   background: var(--cloud);
@@ -1067,13 +1076,13 @@ body {
   line-height: 1.87;
 }
 /* Hamburger Menu Open */
-.menu-toggle.js-open-menu {
-  display: flex;
+.js-open-menu {
+  /* display: flex; */
   align-items: center;
   justify-content: center;
-
+  font-size: 16px;
   margin-left: auto;
-  padding: 0;
+  padding: 0px;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -1089,10 +1098,16 @@ body {
 .menu-icon {
   fill: currentColor;
 }
-.menu-toggle.js-close-menu {
+.js-close-menu {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 24px;
-  margin-left: auto;
+  /* margin-left: auto; */
   padding: 0;
   background-color: transparent;
   cursor: pointer;
@@ -1101,19 +1116,20 @@ body {
   outline: none;
   color: var(--navyblue);
   background-color: var(--cornflower);
+  flex-shrink: 0;
 }
 
 /* Hamburger Menu Navigations and Close Icon */
 .menu-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: fixed;
-  top: 24px;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 80px 0 40px 40px;
   background-color: var(--white);
   z-index: 200;
 
@@ -1136,6 +1152,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
+  gap: 40px;
   letter-spacing: 0.72px;
   color: var(--navyblue);
 
@@ -1147,17 +1164,22 @@ body {
 .mob-nav-menu-link.current {
   color: var(--ocean);
 }
-
+.mob-contacts-menu-list {
+  margin-top: 284px;
+  margin-bottom: 48px;
+}
 .mob-contacts-menu-item {
   /* address doesn't inherit font style */
-
-  margin-bottom: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .mob-contacts-menu-phone-link {
   /* Link tags doesn't inherit colors */
+  margin-bottom: 40px;
   color: var(--slate);
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   letter-spacing: 0.72px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1184,8 +1206,11 @@ body {
   display: inline-flex;
   align-items: flex-start;
   gap: 35px;
+
   @media screen and(min-width:428px) {
-    gap: 56px;
+    width: 328px;
+    column-gap: 56px;
+    background-color: #2196f3;
   }
 }
 
