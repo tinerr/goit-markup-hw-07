@@ -61,7 +61,7 @@
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
-          <svg class="menu-icon" width="32" height="22">
+          <svg class="menu-icon" width="42" height="32">
             <use href="./images/icons.svg#icon-hamburger-open"></use>
           </svg>
         </button>
@@ -70,7 +70,7 @@
 
     <!-- FILTERS -->
     <main>
-      <section class="section">
+      <section class="portfolio-section">
         <div class="container">
           <!-- Filters -->
           <ul class="filters list">
@@ -90,9 +90,12 @@
               <button type="button" class="button filter">Marketing</button>
             </li>
           </ul>
+        </div>
 
-          <!-- Projects -->
-          <ul class="projects list">
+        <!-- Projects -->
+        <!-- <section class="portfolio-section"> -->
+        <div class="container">
+          <ul class="project-list list">
             <li class="project-card">
               <a href="#" class="project link">
                 <div class="project-cover-wrap">
@@ -550,7 +553,7 @@
                   rel="noreferrer noopener"
                   aria-label="link to instagram"
                 >
-                  <svg class="social-icon" width="16" height="16">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#instagram"></use>
                   </svg>
                 </a>
@@ -561,7 +564,7 @@
                   href="https://twitter.com/"
                   target="_blank"
                   rel="noreferrer noopener"
-                  ><svg class="social-icon" width="16" height="16">
+                  ><svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#twitter"></use>
                   </svg>
                 </a>
@@ -572,7 +575,7 @@
                   href="https://www.facebook.com/"
                   target="_blank"
                   rel="noreferrer noopener"
-                  ><svg class="social-icon" width="16" height="16">
+                  ><svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#facebook"></use>
                   </svg>
                 </a>
@@ -584,7 +587,7 @@
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <svg class="social-icon" width="16" height="16">
+                  <svg class="social-icon" width="24" height="24">
                     <use href="./images/icons.svg#linkedin"></use>
                   </svg>
                 </a>
@@ -699,98 +702,106 @@
     <!-- Hamburger Menu Close Icon and Navigations-->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <!-- Hamburger Menu Close Icon-->
-      <button class="menu-toggle js-close-menu">
-        <svg class="menu-icon" width="8" height="8">
-          <use href="./images/icons.svg#icon-hamburger-close"></use>
-        </svg>
-      </button>
+      <div class="mob-container">
+        <div>
+          <button class="menu-toggle js-close-menu">
+            <svg class="menu-icon" width="8" height="8">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mob-menu-container">
+          <!-- Mobile Navigation -->
+          <ul class="mob-nav-menu-list list">
+            <li class="mob-nav-menu-item">
+              <a href="./index.html" class="mob-nav-menu-link link current"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-nav-menu-item">
+              <a href="./portfolio.html" class="mob-nav-menu-link link"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-nav-menu-item">
+              <a href="#" class="mob-nav-menu-link link">Contacts</a>
+            </li>
+          </ul>
+          <div class="mob-contacts-container">
+            <!-- Mobile Contacts Address -->
+            <ul class="mob-contacts-menu-list list">
+              <li class="mob-contacts-menu-item">
+                <a
+                  href="tel:+110001111111"
+                  class="mob-contacts-menu-phone-link link"
+                  >+11(000)111-11-11</a
+                >
+              </li>
+              <li class="mob-contacts-menu-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contacts-menu-email-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
 
-      <!-- Mobile Navigation -->
-      <ul class="mob-nav-menu-list list">
-        <li class="mob-nav-menu-item">
-          <a href="./index.html" class="mob-nav-menu-link link current"
-            >Studio</a
-          >
-        </li>
-        <li class="mob-nav-menu-item">
-          <a href="./portfolio.html" class="mob-nav-menu-link link"
-            >Portfolio</a
-          >
-        </li>
-        <li class="mob-nav-menu-item">
-          <a href="#" class="mob-nav-menu-link link">Contacts</a>
-        </li>
-      </ul>
-
-      <!-- Mobile Contacts Address -->
-      <ul class="mob-contacts-menu-list list">
-        <li class="mob-contacts-menu-item">
-          <a href="tel:+110001111111" class="mob-contacts-menu-phone-link link"
-            >+11(000)111-11-11</a
-          >
-        </li>
-        <li class="mob-contacts-menu-item">
-          <a
-            href="mailto:info@devstudio.com"
-            class="mob-contacts-menu-email-link link"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
-
-      <!-- Mobile Socials -->
-      <ul class="mob-social-icon-list list">
-        <li class="mob-social-icon-item">
-          <a
-            class="mob-social-icon-link link"
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="link to Instagram"
-          >
-            <svg class="mob-social-icon" width="16" height="16">
-              <use href="./images/icons.svg#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="mob-social-icon-item">
-          <a
-            class="mob-social-icon-link link"
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="link to Twitter"
-            ><svg class="social-icon" width="16" height="16">
-              <use href="./images/icons.svg#twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="mob-social-icon-item">
-          <a
-            class="mob-social-icon-link link"
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="link to Facebook"
-            ><svg class="mob-social-icon" width="16" height="16">
-              <use href="./images/icons.svg#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="mob-social-icon-item">
-          <a
-            class="mob-social-icon-link link"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="link to Linkedin"
-          >
-            <svg class="mob-social-icon" width="16" height="16">
-              <use href="./images/icons.svg#linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+            <!-- Mobile Socials -->
+            <ul class="mob-social-icon-list list">
+              <li class="mob-social-icon-item">
+                <a
+                  class="mob-social-icon-link link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="link to Instagram"
+                >
+                  <svg class="mob-social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-social-icon-item">
+                <a
+                  class="mob-social-icon-link link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="link to Twitter"
+                  ><svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-social-icon-item">
+                <a
+                  class="mob-social-icon-link link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="link to Facebook"
+                  ><svg class="mob-social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-social-icon-item">
+                <a
+                  class="mob-social-icon-link link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="link to Linkedin"
+                >
+                  <svg class="mob-social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- MODAL SCRIPT -->
